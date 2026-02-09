@@ -28,7 +28,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm font-medium text-white/65 hover:text-white/90 transition-colors hover:text-foreground"
               >
                 {link.label}
               </a>
@@ -57,7 +57,7 @@ export function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="block text-sm font-medium text-white/65 hover:text-white/90 transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </a>

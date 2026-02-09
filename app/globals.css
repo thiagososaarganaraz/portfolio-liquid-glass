@@ -11,17 +11,17 @@
 @layer base {
   :root {
     --background: 220 20% 8%;
-    --foreground: 210 20% 95%;
+    --foreground: 210 40% 98%;
     --card: 220 15% 12%;
     --card-foreground: 210 20% 95%;
     --popover: 220 15% 12%;
     --popover-foreground: 210 20% 95%;
-    --primary: 185 80% 55%;
-    --primary-foreground: 220 20% 8%;
+    --primary: 210 20% 92%;          /* platinum light */
+    --primary-foreground: 220 20% 8%; 
     --secondary: 220 12% 18%;
     --secondary-foreground: 210 15% 80%;
     --muted: 220 12% 16%;
-    --muted-foreground: 210 10% 55%;
+    --muted-foreground: 210 15% 72%;
     --accent: 270 60% 65%;
     --accent-foreground: 210 20% 95%;
     --destructive: 0 84.2% 60.2%;
@@ -49,13 +49,17 @@
 
 /* Glass utility classes */
 .glass {
-  background: rgba(15, 20, 30, 0.55);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .glass-light {

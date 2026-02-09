@@ -8,9 +8,9 @@ const _geist = Geist({ subsets: ['latin'] })
 const _geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Thiago | Design Engineer',
+  title: 'Thiago | Frontend Engineer',
   description:
-    'Portfolio of Thiago — Design Engineer bridging technical mastery and intuitive design. React, TypeScript, Next.js, Tailwind CSS, Figma.',
+    'Portfolio of Thiago — Frontend Engineer bridging technical mastery and intuitive design. React, TypeScript, Next.js, Tailwind CSS, Figma.',
 }
 
 export const viewport: Viewport = {

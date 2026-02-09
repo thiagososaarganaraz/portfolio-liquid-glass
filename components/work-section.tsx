@@ -1,36 +1,44 @@
 "use client"
 
-import { ArrowUpRight } from "lucide-react"
-import Image from "next/image"
+import {
+  Layers,
+  Sparkles,
+  Gauge,
+  Users,
+} from "lucide-react"
 
-const projects = [
+const experiences = [
   {
-    title: "Flux Dashboard",
+    title: "Product Engineering",
+    scope: "Core product features",
     description:
-      "A real-time analytics dashboard with fluid data visualizations and a dark glassmorphic interface.",
-    tags: ["Frontend", "UX", "Data Viz"],
-    image: "/projects/project-1.jpg",
+      "Designing and building user-facing features in a complex production environment, balancing usability, performance, and long-term maintainability.",
+    tags: ["React", "TypeScript", "Product"],
+    icon: Layers,
   },
   {
-    title: "Solara Commerce",
+    title: "Design Systems",
+    scope: "Scalable UI foundations",
     description:
-      "End-to-end e-commerce platform redesign focused on conversion optimization and mobile-first UX.",
-    tags: ["Frontend", "UI Design"],
-    image: "/projects/project-2.jpg",
+      "Creating and evolving reusable components, tokens, and patterns to ensure visual and functional consistency across teams and products.",
+    tags: ["Design Systems", "UI Architecture"],
+    icon: Sparkles,
   },
   {
-    title: "Nimbus App",
+    title: "Performance & Quality",
+    scope: "Optimization & reliability",
     description:
-      "Cloud-native productivity app featuring gesture-driven navigation and an adaptive component system.",
-    tags: ["React Native", "Design System"],
-    image: "/projects/project-3.jpg",
+      "Improving perceived and real performance through careful profiling, refactoring, and attention to accessibility and edge cases.",
+    tags: ["Performance", "Accessibility"],
+    icon: Gauge,
   },
   {
-    title: "Aether Studio",
+    title: "Collaboration",
+    scope: "Team & process",
     description:
-      "Creative agency portfolio with immersive scroll-driven animations and 3D micro-interactions.",
-    tags: ["Frontend", "Animation"],
-    image: "/projects/project-4.jpg",
+      "Working closely with designers, product managers, and engineers through reviews, technical discussions, and shared ownership.",
+    tags: ["Collaboration", "Code Reviews"],
+    icon: Users,
   },
 ]
 
@@ -39,55 +47,53 @@ export function WorkSection() {
     <section id="work" className="relative px-6 py-28 md:py-36">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">
-            Selected Work
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-white/60">
+            Experience
           </p>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Projects I&apos;m proud of.
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
+            How I contribute in my current role.
           </h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
+          {experiences.map((exp) => (
             <article
-              key={project.title}
-              className="group glass cursor-pointer overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-1 hover:border-white/15 hover:shadow-[0_16px_48px_rgba(0,0,0,0.4)]"
+              key={exp.title}
+              className="group glass rounded-3xl p-6 md:p-8
+              transition-all duration-500
+              hover:-translate-y-1
+              hover:border-white/20
+              hover:shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
             >
-              {/* Project Image */}
-              <div className="relative h-52 overflow-hidden md:h-64">
-                <Image
-                  src={project.image || "/placeholder.svg"}
-                  alt={`${project.title} project screenshot`}
-                  fill
-                  className="object-cover opacity-60 blur-[2px] transition-all duration-500 group-hover:opacity-90 group-hover:blur-0"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(15,20,30,0.9)] via-[rgba(15,20,30,0.3)] to-transparent" />
+              {/* Abstract Header */}
+              <div className="mb-6 flex items-center gap-3">
+                <div className="glass-chip flex h-10 w-10 items-center justify-center rounded-full text-white/70">
+                  <exp.icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">
+                    {exp.title}
+                  </h3>
+                  <p className="text-xs text-white/50">
+                    {exp.scope}
+                  </p>
+                </div>
               </div>
 
-              {/* Project Info */}
-              <div className="relative p-6 md:p-8">
-                <div className="mb-3 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="glass-chip rounded-full px-3 py-1 text-xs font-medium text-muted-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <p className="text-sm leading-relaxed text-white/65">
+                {exp.description}
+              </p>
 
-                <h3 className="text-xl font-semibold text-foreground">
-                  {project.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {project.description}
-                </p>
-
-                <div className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-all duration-300 group-hover:opacity-100">
-                  View Case Study
-                  <ArrowUpRight className="h-4 w-4" />
-                </div>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {exp.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="glass-chip rounded-full px-3 py-1
+                    text-xs font-medium text-white/60"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </article>
           ))}
