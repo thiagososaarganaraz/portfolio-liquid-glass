@@ -13,7 +13,7 @@ export default function Page() {
         style={{ backgroundImage: "url('/bg-liquid.jpg')" }}
         aria-hidden="true"
       >
-        <div className="absolute inset-0 bg-background/70" />
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]" />
       </div>
 
       <Navbar />

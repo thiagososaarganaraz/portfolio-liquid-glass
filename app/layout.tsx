@@ -3,14 +3,15 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
 import './globals.css'
+import { RootLayoutClient } from './root-layout-client'
 
 const _geist = Geist({ subsets: ['latin'] })
 const _geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Thiago | Design Engineer',
+  title: 'Thiago | Frontend Engineer',
   description:
-    'Portfolio of Thiago — Design Engineer bridging technical mastery and intuitive design. React, TypeScript, Next.js, Tailwind CSS, Figma.',
+    'Portfolio of Thiago — Frontend Engineer bridging technical mastery and intuitive design. React, TypeScript, Next.js, Tailwind CSS, Figma.',
 }
 
 export const viewport: Viewport = {
@@ -26,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+      <RootLayoutClient>{children}</RootLayoutClient>
     </html>
   )
 }
