@@ -17,4 +17,5 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_THIAGO_PORTFOLIO_DEV }}'
+          channelId: live # Esto fuerza el despliegue a la URL de producción directamente
           projectId: thiago-portfolio-dev
