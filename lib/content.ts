@@ -12,7 +12,8 @@ export const content = {
     hero: {
       label: "Frontend Engineer",
       title: "Hello, I'm Thiago.",
-      subtitle: "Bridging the gap between technical mastery and intuitive design.",
+      subtitle:
+        "Bridging the gap between technical mastery and intuitive design.",
       cta: "View My Work",
     },
 
@@ -21,7 +22,7 @@ export const content = {
       label: "About Me",
       title: "Frontend Engineer.",
       description:
-        "I craft user-centric digital experiences where thoughtful design meets robust engineering. From high-fidelity prototyping in Figma to production-ready code in React and Next.js, I own the full creative pipeline.",
+        "I craft user-centric digital experiences where thoughtful design meets robust engineering. I leverage modern AI tools as part of my workflow to learn faster, explore solutions, and work more efficiently—always prioritizing clarity, usability, and execution. From concept to production-ready code in React and Next.js, I focus on building interfaces that feel intuitive and reliable.",
       skills: {
         react: "React",
         typescript: "TypeScript",
@@ -29,6 +30,7 @@ export const content = {
         tailwind: "Tailwind CSS",
         figma: "Figma",
         uxdesign: "UI/UX Design",
+        ai: "AI-Assisted Workflow",
       },
     },
 
@@ -45,14 +47,14 @@ export const content = {
           title: "Frontend Product Engineering",
           scope: "User-facing experiences",
           description:
-            "Designing and building intuitive, high-impact interfaces for a fast-moving startup. I translate abstract business needs into clear, usable frontends, focusing on clarity, flow, and real-world usability rather than just feature delivery.",
+            "Designing and building intuitive, high-impact interfaces for a fast-moving startup. I translate abstract business needs into clear, usable frontends, combining strong engineering fundamentals with efficient, modern workflows.",
           tags: ["React", "Frontend Architecture", "UX Thinking"],
         },
         {
           title: "UX-Driven Development",
           scope: "Visual clarity & interaction",
           description:
-            "Shaping interfaces with a strong visual and interaction-first mindset, inspired by modern design systems and widely adopted products. I naturally visualize solutions before writing code.",
+            "Shaping interfaces with a strong visual and interaction-first mindset, inspired by modern design systems and widely adopted products. I naturally visualize solutions before writing code, allowing for fast and intentional execution.",
           tags: ["UI Design", "Interaction Design", "Design Trends"],
         },
         {
@@ -99,7 +101,8 @@ export const content = {
     hero: {
       label: "Frontend Engineer",
       title: "Hola, soy Thiago.",
-      subtitle: "Uniendo la excelencia técnica con el diseño intuitivo.",
+      subtitle:
+        "Uniendo la excelencia técnica con el diseño intuitivo.",
       cta: "Ver mi trabajo",
     },
 
@@ -108,7 +111,7 @@ export const content = {
       label: "Sobre mí",
       title: "Frontend Engineer.",
       description:
-        "Creo experiencias digitales centradas en el usuario, donde el diseño reflexivo se encuentra con la ingeniería sólida. Desde prototipos de alta fidelidad en Figma hasta código listo para producción en React y Next.js, dirijo todo el proceso creativo.",
+        "Creo experiencias digitales centradas en el usuario, donde el diseño reflexivo se encuentra con la ingeniería sólida. Utilizo herramientas modernas de IA como parte de mi flujo de trabajo para aprender más rápido, explorar soluciones y trabajar de forma más eficiente, sin perder foco en la claridad, la usabilidad y la ejecución. Desde la idea hasta código listo para producción en React y Next.js.",
       skills: {
         react: "React",
         typescript: "TypeScript",
@@ -116,6 +119,7 @@ export const content = {
         tailwind: "Tailwind CSS",
         figma: "Figma",
         uxdesign: "Diseño UI/UX",
+        ai: "Flujo de trabajo asistido por IA",
       },
     },
 
@@ -132,28 +136,28 @@ export const content = {
           title: "Ingeniería de Producto Frontend",
           scope: "Experiencias orientadas al usuario",
           description:
-            "Diseño y construcción de interfaces intuitivas y de alto impacto para una startup en rápido crecimiento. Traduzco necesidades comerciales abstractas en interfaces claras y usables, enfocándome en la claridad, el flujo y la usabilidad del mundo real.",
+            "Diseño y construcción de interfaces intuitivas y de alto impacto para una startup en rápido crecimiento. Traduzco necesidades abstractas del negocio en interfaces claras y usables, apoyándome en fundamentos sólidos y flujos de trabajo eficientes.",
           tags: ["React", "Arquitectura Frontend", "Pensamiento UX"],
         },
         {
           title: "Desarrollo Orientado a UX",
           scope: "Claridad visual e interacción",
           description:
-            "Diseño de interfaces con una mentalidad fuerte en lo visual y en la interacción, inspirada en sistemas de diseño modernos. Visualizo soluciones antes de escribir código.",
+            "Diseño de interfaces con una fuerte mentalidad visual e interactiva, inspirada en sistemas de diseño modernos. Visualizo soluciones antes de escribir código, lo que permite una ejecución rápida e intencional.",
           tags: ["Diseño UI", "Diseño de Interacción", "Tendencias de Diseño"],
         },
         {
           title: "Rendimiento y Retroalimentación",
           scope: "Capacidad de respuesta y percepción",
           description:
-            "Optimizo el rendimiento percibido y real al reducir tiempos de espera, añadir retroalimentación significativa y garantizar que los usuarios siempre estén informados. Cada interacción está diseñada para sentirse fluida, receptiva y nunca bloqueante.",
+            "Optimizo el rendimiento percibido y real reduciendo tiempos de espera, agregando feedback significativo y manteniendo al usuario siempre informado. Cada interacción está pensada para sentirse fluida y sin fricciones.",
           tags: ["Rendimiento", "UX", "Accesibilidad"],
         },
         {
           title: "Colaboración de Producto y Liderazgo",
           scope: "Comunicación y responsabilidad",
           description:
-            "Trabajo directo con el CEO y liderazgo de producto para recopilar requisitos, alinear prioridades y proponer soluciones. Colaboro con propósito, mentorizo desarrolladores junior y ayudo a incorporar nuevos miembros en ambientes profesionales y ágiles.",
+            "Trabajo directamente con el CEO y el liderazgo de producto para relevar requisitos, alinear prioridades y proponer soluciones. Colaboro con propósito, mentoreo desarrolladores junior y ayudo a integrar nuevos miembros en entornos ágiles y profesionales.",
           tags: ["Ágil", "Comunicación", "Mentoría"],
         },
       ],
@@ -161,10 +165,10 @@ export const content = {
 
     // Sección Contacto
     contact: {
-      label: "Ponerse en contacto",
+      label: "Contacto",
       title: "Construyamos algo increíble juntos.",
       description:
-        "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades de ser parte de tu visión.",
+        "Siempre estoy abierto a conversar sobre nuevos proyectos, ideas creativas u oportunidades.",
       socialLinks: {
         github: "GitHub",
         linkedin: "LinkedIn",
