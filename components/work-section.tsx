@@ -9,35 +9,35 @@ import {
 
 const experiences = [
   {
-    title: "Product Engineering",
-    scope: "Core product features",
+    title: "Frontend Product Engineering",
+    scope: "User-facing experiences",
     description:
-      "Designing and building user-facing features in a complex production environment, balancing usability, performance, and long-term maintainability.",
-    tags: ["React", "TypeScript", "Product"],
+      "Designing and building intuitive, high-impact interfaces for a fast-moving startup. I translate abstract business needs into clear, usable frontends, focusing on clarity, flow, and real-world usability rather than just feature delivery.",
+    tags: ["React", "Frontend Architecture", "UX Thinking"],
     icon: Layers,
   },
   {
-    title: "Design Systems",
-    scope: "Scalable UI foundations",
+    title: "UX-Driven Development",
+    scope: "Visual clarity & interaction",
     description:
-      "Creating and evolving reusable components, tokens, and patterns to ensure visual and functional consistency across teams and products.",
-    tags: ["Design Systems", "UI Architecture"],
+      "Shaping interfaces with a strong visual and interaction-first mindset, inspired by modern design systems and widely adopted products. I naturally visualize solutions before writing code, often skipping static mockups in favor of direct, intentional implementation.",
+    tags: ["UI Design", "Interaction Design", "Design Trends"],
     icon: Sparkles,
   },
   {
-    title: "Performance & Quality",
-    scope: "Optimization & reliability",
+    title: "Performance & User Feedback",
+    scope: "Responsiveness & perception",
     description:
-      "Improving perceived and real performance through careful profiling, refactoring, and attention to accessibility and edge cases.",
-    tags: ["Performance", "Accessibility"],
+      "Optimizing perceived and real performance by reducing waiting times, adding meaningful feedback, and ensuring users are always informed. Every interaction is designed to feel fluid, responsive, and never blocking.",
+    tags: ["Performance", "UX", "Accessibility"],
     icon: Gauge,
   },
   {
-    title: "Collaboration",
-    scope: "Team & process",
+    title: "Product Collaboration & Leadership",
+    scope: "Communication & ownership",
     description:
-      "Working closely with designers, product managers, and engineers through reviews, technical discussions, and shared ownership.",
-    tags: ["Collaboration", "Code Reviews"],
+      "Working directly with the CEO and product leadership to gather requirements, align priorities, and propose solutions. I collaborate with purpose, mentor junior developers, and help onboard new team members into professional, agile environments.",
+    tags: ["Agile", "Communication", "Mentorship"],
     icon: Users,
   },
 ]
@@ -46,7 +46,8 @@ export function WorkSection() {
   return (
     <section id="work" className="relative px-6 py-28 md:py-36">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-14 text-center">
+        {/* Section Header */}
+        <div className="mb-10 text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-white/60">
             Experience
           </p>
@@ -55,6 +56,26 @@ export function WorkSection() {
           </h2>
         </div>
 
+        {/* Company Context */}
+        <div className="mb-14 text-center">
+          <p className="mb-2 text-xs uppercase tracking-widest text-white/40">
+            Currently at
+          </p>
+          <a
+            href="https://snoopconsulting.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2
+              text-sm font-medium text-white/70
+              transition-colors duration-300
+              hover:text-white"
+          >
+            Snoop Consulting
+            <span className="text-white/40">· company-website.com</span>
+          </a>
+        </div>
+
+        {/* Experience Grid */}
         <div className="grid gap-6 md:grid-cols-2">
           {experiences.map((exp) => (
             <article

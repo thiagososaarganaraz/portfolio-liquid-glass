@@ -3,17 +3,17 @@ import { Github, Linkedin, Mail } from "lucide-react"
 const links = [
   {
     label: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/thiagososaarganaraz",
     icon: Github,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/thiago-sosa-arganaraz/",
     icon: Linkedin,
   },
   {
     label: "Email",
-    href: "mailto:hello@thiago.dev",
+    href: "mailto:thiagososaarganaraz@gmail.com",
     icon: Mail,
   },
 ]
