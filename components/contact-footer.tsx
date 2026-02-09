@@ -1,40 +1,44 @@
-import { Github, Linkedin, Mail } from "lucide-react"
+"use client"
 
-const links = [
-  {
-    label: "GitHub",
-    href: "https://github.com/thiagososaarganaraz",
-    icon: Github,
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/thiago-sosa-arganaraz/",
-    icon: Linkedin,
-  },
-  {
-    label: "Email",
-    href: "mailto:thiagososaarganaraz@gmail.com",
-    icon: Mail,
-  },
-]
+import { Github, Linkedin, Mail } from "lucide-react"
+import { useLanguage } from "@/context/LanguageContext"
+import { content } from "@/lib/content"
 
 export function ContactFooter() {
+  const { lang } = useLanguage()
+  const contactContent = content[lang].contact
+
+  const links = [
+    {
+      label: contactContent.socialLinks.github,
+      href: "https://github.com/thiagososaarganaraz",
+      icon: Github,
+    },
+    {
+      label: contactContent.socialLinks.linkedin,
+      href: "https://www.linkedin.com/in/thiago-sosa-arganaraz/",
+      icon: Linkedin,
+    },
+    {
+      label: contactContent.socialLinks.email,
+      href: "mailto:thiagososaarganaraz@gmail.com",
+      icon: Mail,
+    },
+  ]
   return (
     <footer id="contact" className="relative px-6 pb-12 pt-16 md:pb-16 md:pt-28">
       <div className="mx-auto max-w-2xl">
         <div className="glass rounded-3xl p-8 text-center md:p-14">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-white/60">
-            Get In Touch
+            {contactContent.label}
           </p>
 
           <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
-            {"Let's build something together."}
+            {contactContent.title}
           </h2>
 
           <p className="mx-auto mt-4 max-w-md text-pretty text-base leading-relaxed text-white/65">
-            {
-              "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision."
-            }
+            {contactContent.description}
           </p>
 
           <div className="mt-10 flex items-center justify-center gap-4">

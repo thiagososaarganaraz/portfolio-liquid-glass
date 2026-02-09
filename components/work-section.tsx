@@ -6,60 +6,41 @@ import {
   Gauge,
   Users,
 } from "lucide-react"
+import { useLanguage } from "@/context/LanguageContext"
+import { content } from "@/lib/content"
 
-const experiences = [
-  {
-    title: "Frontend Product Engineering",
-    scope: "User-facing experiences",
-    description:
-      "Designing and building intuitive, high-impact interfaces for a fast-moving startup. I translate abstract business needs into clear, usable frontends, focusing on clarity, flow, and real-world usability rather than just feature delivery.",
-    tags: ["React", "Frontend Architecture", "UX Thinking"],
-    icon: Layers,
-  },
-  {
-    title: "UX-Driven Development",
-    scope: "Visual clarity & interaction",
-    description:
-      "Shaping interfaces with a strong visual and interaction-first mindset, inspired by modern design systems and widely adopted products. I naturally visualize solutions before writing code, often skipping static mockups in favor of direct, intentional implementation.",
-    tags: ["UI Design", "Interaction Design", "Design Trends"],
-    icon: Sparkles,
-  },
-  {
-    title: "Performance & User Feedback",
-    scope: "Responsiveness & perception",
-    description:
-      "Optimizing perceived and real performance by reducing waiting times, adding meaningful feedback, and ensuring users are always informed. Every interaction is designed to feel fluid, responsive, and never blocking.",
-    tags: ["Performance", "UX", "Accessibility"],
-    icon: Gauge,
-  },
-  {
-    title: "Product Collaboration & Leadership",
-    scope: "Communication & ownership",
-    description:
-      "Working directly with the CEO and product leadership to gather requirements, align priorities, and propose solutions. I collaborate with purpose, mentor junior developers, and help onboard new team members into professional, agile environments.",
-    tags: ["Agile", "Communication", "Mentorship"],
-    icon: Users,
-  },
-]
+const iconMap = {
+  "Frontend Product Engineering": Layers,
+  "UX-Driven Development": Sparkles,
+  "Performance & User Feedback": Gauge,
+  "Product Collaboration & Leadership": Users,
+}
 
 export function WorkSection() {
+  const { lang } = useLanguage()
+  const workContent = content[lang].work
+
+  const experiences = workContent.experiences.map((exp, index) => ({
+    ...exp,
+    icon: Object.values(iconMap)[index],
+  }))
   return (
     <section id="work" className="relative px-6 py-28 md:py-36">
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="mb-10 text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-white/60">
-            Experience
+            {workContent.label}
           </p>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
-            How I contribute in my current role.
+            {workContent.title}
           </h2>
         </div>
 
         {/* Company Context */}
         <div className="mb-14 text-center">
           <p className="mb-2 text-xs uppercase tracking-widest text-white/40">
-            Currently at
+            {workContent.currentlyAt}
           </p>
           <a
             href="https://snoopconsulting.com"
@@ -70,8 +51,8 @@ export function WorkSection() {
               transition-colors duration-300
               hover:text-white"
           >
-            Snoop Consulting
-            <span className="text-white/40">· company-website.com</span>
+            {workContent.company}
+            <span className="text-white/40">· {workContent.companyWebsite}</span>
           </a>
         </div>
 
