@@ -97,7 +97,7 @@ export function ProjectsCarousel() {
     <section id="projects" className="relative px-6 py-28 md:py-36">
       <div className="mx-auto flex w-full max-w-full flex-col items-center">
         {/* Section Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-2 text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-white/60">
             {projectsContent.label}
           </p>
