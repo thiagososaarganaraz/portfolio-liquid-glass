@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import axios from "axios";
 import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { content } from "@/lib/content";
 import { db } from "@/lib/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -17,41 +18,11 @@ interface Project {
   github?: string;
 }
 
-const MOCK_PROJECTS: Project[] = [
-  {
-    id: "1",
-    title: "Portfolio Liquid Glass",
-    description:
-      "Un portafolio moderno con diseño liquid glass, tema oscuro y sistema bilingüe (español/inglés). Construido con Next.js 16 y Tailwind CSS.",
-    image: "https://via.placeholder.com/600x400?text=Portfolio+Liquid+Glass",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    link: "https://portfolio.example.com",
-    github: "https://github.com/example/portfolio",
-  },
-  {
-    id: "2",
-    title: "E-commerce Platform",
-    description:
-      "Plataforma de comercio electrónico con carrito de compras, sistema de pagos integrado y gestión de inventario en tiempo real.",
-    image: "https://via.placeholder.com/600x400?text=E-commerce+Platform",
-    tags: ["React", "Firebase", "Stripe", "Node.js"],
-    link: "https://ecommerce.example.com",
-    github: "https://github.com/example/ecommerce",
-  },
-  {
-    id: "3",
-    title: "Task Management App",
-    description:
-      "Aplicación de gestión de tareas con colaboración en tiempo real, sistema de notificaciones y sincronización en múltiples dispositivos.",
-    image: "https://via.placeholder.com/600x400?text=Task+Management",
-    tags: ["React Native", "Firebase", "Redux", "Expo"],
-    link: "https://tasks.example.com",
-    github: "https://github.com/example/tasks",
-  },
-];
-
 export function ProjectsCarousel() {
-  const [projects, setProjects] = useState<Project[]>(MOCK_PROJECTS);
+  const { lang } = useLanguage();
+  const projectsContent = content[lang].projects;
+
+  const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -70,7 +41,7 @@ export function ProjectsCarousel() {
         if (querySnapshot.empty) {
           // Use mock data if no projects found
           console.log("No projects found in Firestore, using mock data");
-          setProjects(MOCK_PROJECTS);
+          setProjects([]);
         } else {
           const fetchedProjects = querySnapshot.docs.map((doc) => ({
             id: doc.id,
@@ -81,7 +52,7 @@ export function ProjectsCarousel() {
       } catch (error) {
         console.error("Error fetching projects:", error);
         // Fallback to mock data on error
-        setProjects(MOCK_PROJECTS);
+        setProjects([]);
       } finally {
         setLoading(false);
       }
@@ -115,7 +86,7 @@ export function ProjectsCarousel() {
       <section id="projects" className="relative px-6 py-28 md:py-36">
         <div className="mx-auto max-w-full">
           <div className="flex items-center justify-center h-96">
-            <div className="text-white/60">Cargando proyectos...</div>
+            <div className="text-white/60">{projectsContent.loading}</div>
           </div>
         </div>
       </section>
@@ -128,14 +99,13 @@ export function ProjectsCarousel() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-white/60">
-            Portafolio
+            {projectsContent.label}
           </p>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Proyectos Destacados
+            {projectsContent.title}
           </h2>
           <p className="mt-4 text-sm text-white/50 max-w-2xl mx-auto">
-            Explora una selección de proyectos que demuestran mi experiencia en
-            desarrollo frontend, diseño de interfaces y soluciones innovadoras.
+            {projectsContent.description}
           </p>
         </div>
 
@@ -165,8 +135,7 @@ export function ProjectsCarousel() {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="h-full w-full object-cover transition-transform duration-500
-                        group-hover:scale-110"
+                        className="h-full w-full object-cover transition-transform"
                       />
                       {/* Gradient Overlay */}
                       <div
@@ -222,7 +191,7 @@ export function ProjectsCarousel() {
                             text-white/80 hover:text-white"
                           >
                             <ExternalLink className="h-4 w-4" />
-                            Ver Proyecto
+                            {projectsContent.buttons.viewProject}
                           </a>
                         )}
                         {project.github && (
@@ -237,7 +206,7 @@ export function ProjectsCarousel() {
                             text-white/80 hover:text-white"
                           >
                             <Github className="h-4 w-4" />
-                            Código
+                            {projectsContent.buttons.viewCode}
                           </a>
                         )}
                       </div>
@@ -294,7 +263,7 @@ export function ProjectsCarousel() {
 
         {/* Project Count */}
         <p className="mt-8 text-sm text-white/50">
-          {projects.length} proyectos disponibles
+          {projects.length} {projectsContent.projectsAvailable}
         </p>
       </div>
     </section>
