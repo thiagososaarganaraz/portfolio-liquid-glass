@@ -120,7 +120,7 @@ export function ProjectsCarousel() {
               {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="min-w-full p-8 flex justify-center"
+                  className="min-w-full py-28 flex justify-center"
                 >
                   {/* Project Card */}
                   <article
