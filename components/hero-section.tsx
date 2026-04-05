@@ -10,7 +10,7 @@ export function HeroSection() {
 
   return (
   <section className="relative flex min-h-screen items-center justify-center px-6 pt-20">
-    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(0,200,200,0.12),transparent_60%)]" />
+    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(0,200,200,0.04),transparent_60%)]" />
       <div className="glass mx-auto w-full max-w-2xl rounded-3xl p-8 text-center md:p-14">
         <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary">
           {heroContent.label}
