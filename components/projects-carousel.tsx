@@ -120,19 +120,17 @@ export function ProjectsCarousel() {
               {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="min-w-full pl-4 flex justify-center"
+                  className="min-w-full p-8 flex justify-center"
                 >
                   {/* Project Card */}
                   <article
                     className="group glass rounded-3xl overflow-hidden
                     w-full max-w-2xl transition-all duration-500
                     hover:-translate-y-2
-                    hover:border-white/30
-                    hover:shadow-[0_30px_80px_rgba(0,0,0,0.45)]"
+                    hover:border-white/30"
                   >
                     {/* Image Container */}
-                    <div className="relative h-96 overflow-hidden bg-gradient-to-br from-white/10 to-white/5">
-                      <img
+                    <div className="relative h-96 overflow-hidden rounded-t-3xl bg-gradient-to-br from-white/10 to-white/5">                      <img
                         src={project.image}
                         alt={project.title}
                         className="h-full w-full object-cover transition-transform"
