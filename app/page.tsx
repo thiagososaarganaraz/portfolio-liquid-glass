@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
 import { WorkSection } from "@/components/work-section"
+import { ProjectsCarousel } from "@/components/projects-carousel"
 import { ContactFooter } from "@/components/contact-footer"
 
 export default function Page() {
@@ -22,6 +23,7 @@ export default function Page() {
         <HeroSection />
         <AboutSection />
         <WorkSection />
+        <ProjectsCarousel />
       </main>
 
       <ContactFooter />
