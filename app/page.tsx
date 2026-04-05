@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
 import { WorkSection } from "@/components/work-section"
+import { ProjectsCarousel } from "@/components/projects-carousel"
 import { ContactFooter } from "@/components/contact-footer"
 
 export default function Page() {
@@ -13,7 +14,7 @@ export default function Page() {
         style={{ backgroundImage: "url('/bg-liquid.jpg')" }}
         aria-hidden="true"
       >
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]" />
       </div>
 
       <Navbar />
@@ -22,6 +23,7 @@ export default function Page() {
         <HeroSection />
         <AboutSection />
         <WorkSection />
+        <ProjectsCarousel />
       </main>
 
       <ContactFooter />

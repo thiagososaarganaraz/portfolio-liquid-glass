@@ -86,6 +86,20 @@ export const content = {
         email: "Email",
       },
     },
+
+    // Projects Section
+    projects: {
+      label: "Portfolio",
+      title: "Featured Projects",
+      description:
+        "",
+      buttons: {
+        viewProject: "View Project",
+        viewCode: "Code",
+      },
+      projectsAvailable: "projects available",
+      loading: "Loading projects...",
+    },
   },
 
   es: {
@@ -174,6 +188,20 @@ export const content = {
         linkedin: "LinkedIn",
         email: "Email",
       },
+    },
+
+    // Sección Proyectos
+    projects: {
+      label: "Portafolio",
+      title: "Proyectos Destacados",
+      description:
+        "",
+      buttons: {
+        viewProject: "Ver Proyecto",
+        viewCode: "Código",
+      },
+      projectsAvailable: "proyectos disponibles",
+      loading: "Cargando proyectos...",
     },
   },
 }
