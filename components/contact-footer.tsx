@@ -29,15 +29,15 @@ export function ContactFooter() {
     <footer id="contact" className="relative px-6 pb-12 pt-16 md:pb-16 md:pt-28">
       <div className="mx-auto max-w-2xl">
         <div className="glass rounded-3xl p-8 text-center md:p-14">
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-white/60">
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-muted">
             {contactContent.label}
           </p>
 
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-high md:text-4xl">
             {contactContent.title}
           </h2>
 
-          <p className="mx-auto mt-4 max-w-md text-pretty text-base leading-relaxed text-white/65">
+          <p className="mx-auto mt-4 max-w-md text-pretty text-base leading-relaxed text-medium">
             {contactContent.description}
           </p>
 
@@ -49,12 +49,12 @@ export function ContactFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.label}
-                className="glass-chip flex h-12 w-12 items-center justify-center rounded-full
-                text-white/60
+                className="glass-chip flex h-12 w-12 items-center justify-center rounded-full outline-none
+                text-medium
                 transition-all duration-300
                 hover:bg-white/10
-                hover:border-white/30
-                hover:text-white/90"
+                hover:border-default
+                hover:text-high focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 <link.icon className="h-5 w-5" />
               </a>
@@ -62,7 +62,7 @@ export function ContactFooter() {
           </div>
         </div>
 
-        <p className="mt-10 text-center text-xs text-white/50">
+        <p className="mt-10 text-center text-xs text-subtle">
           {"© 2026 Thiago. Crafted with care."}
         </p>
       </div>

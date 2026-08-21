@@ -29,30 +29,30 @@ export function WorkSection() {
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-white/60">
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-muted">
             {workContent.label}
           </p>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-high md:text-4xl">
             {workContent.title}
           </h2>
         </div>
 
         {/* Company Context */}
         <div className="mb-14 text-center">
-          <p className="mb-2 text-xs uppercase tracking-widest text-white/40">
+          <p className="mb-2 text-xs uppercase tracking-widest text-subtle">
             {workContent.currentlyAt}
           </p>
           <a
             href="https://snoopconsulting.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2
-              text-sm font-medium text-white/70
+            className="inline-flex items-center gap-2 outline-none
+              text-sm font-medium text-medium
               transition-colors duration-300
-              hover:text-white"
+              hover:text-high focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             {workContent.company}
-            <span className="text-white/40">· {workContent.companyWebsite}</span>
+            <span className="text-subtle">· {workContent.companyWebsite}</span>
           </a>
         </div>
 
@@ -61,28 +61,30 @@ export function WorkSection() {
           {experiences.map((exp) => (
             <article
               key={exp.title}
-              className="group glass rounded-3xl p-6 md:p-8
+              tabIndex={0}
+              className="group glass rounded-3xl p-6 md:p-8 outline-none
               transition-all duration-500
               hover:-translate-y-1
-              hover:border-white/20
-              hover:shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+              hover:border-default
+              hover:shadow-[0_20px_60px_rgba(0,0,0,0.45)]
+              focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {/* Abstract Header */}
               <div className="mb-6 flex items-center gap-3">
-                <div className="glass-chip flex h-10 w-10 items-center justify-center rounded-full text-white/70">
+                <div className="glass-chip flex h-10 w-10 items-center justify-center rounded-full text-medium">
                   <exp.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white">
+                  <h3 className="text-lg font-semibold text-high">
                     {exp.title}
                   </h3>
-                  <p className="text-xs text-white/50">
+                  <p className="text-xs text-subtle">
                     {exp.scope}
                   </p>
                 </div>
               </div>
 
-              <p className="text-sm leading-relaxed text-white/65">
+              <p className="text-sm leading-relaxed text-medium">
                 {exp.description}
               </p>
 
@@ -91,7 +93,7 @@ export function WorkSection() {
                   <span
                     key={tag}
                     className="glass-chip rounded-full px-3 py-1
-                    text-xs font-medium text-white/60"
+                    text-xs font-medium text-muted"
                   >
                     {tag}
                   </span>

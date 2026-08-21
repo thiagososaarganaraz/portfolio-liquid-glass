@@ -6,18 +6,29 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Texto - ratios WCAG AA garantizados */
+  .text-high { @apply text-white; }          
+  .text-medium { @apply text-white/85; }     
+  .text-muted { @apply text-white/65; }      
+  .text-subtle { @apply text-white/50; }     
+  
+  /* Bordes visibles */
+  .border-subtle { @apply border-white/15; } 
+  .border-default { @apply border-white/25; }
+  .border-strong { @apply border-white/40; } 
 }
 
 @layer base {
   :root {
-    --background: 220 20% 8%;
-    --foreground: 210 40% 98%;
-    --card: 220 15% 12%;
+    --background: 220 25% 10%;        /* #111827 - slate-950 */
+    --foreground: 210 30% 96%;        /* #f1f5f9 - menos clínico */
+    --card: 220 20% 14%;              /* #182030 - elevado sutil */
     --card-foreground: 210 20% 95%;
     --popover: 220 15% 12%;
     --popover-foreground: 210 20% 95%;
     --primary: 210 20% 92%;          /* platinum light */
-    --primary-foreground: 220 20% 8%; 
+    --primary-foreground: 220 20% 8%;
     --secondary: 220 12% 18%;
     --secondary-foreground: 210 15% 80%;
     --muted: 220 12% 16%;
@@ -29,6 +40,17 @@
     --border: 210 10% 20%;
     --input: 210 10% 20%;
     --ring: 185 80% 55%;
+
+    /* Glassmorphism variables */
+    --glass-blur-heavy: blur(20px);
+    --glass-blur-medium: blur(16px);
+    --glass-blur-light: blur(12px);
+    --glass-bg-heavy: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.06));
+    --glass-border-heavy: rgba(255, 255, 255, 0.25);
+    --glass-shadow-heavy: rgba(0, 0, 0, 0.35);
+    --glass-inner-shadow-heavy: rgba(255, 255, 255, 0.3);
+    --glass-bg-chip: rgba(255, 255, 255, 0.1);
+    --glass-border-chip: rgba(255, 255, 255, 0.2);
     --chart-1: 185 80% 55%;
     --chart-2: 270 60% 65%;
     --chart-3: 30 80% 60%;
@@ -51,29 +73,22 @@
 .glass {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.12),
-    rgba(255, 255, 255, 0.04)
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.06)
   );
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: var(--glass-blur-heavy) saturate(140%);
+  -webkit-backdrop-filter: var(--glass-blur-heavy) saturate(140%);
+  border: 1px solid var(--glass-border-heavy);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.25);
-}
-
-.glass-light {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+    0 8px 32px var(--glass-shadow-heavy),
+    inset 0 1px 0 var(--glass-inner-shadow-heavy);
 }
 
 .glass-chip {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass-bg-chip);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  border: 1px solid var(--glass-border-chip);
 }
 
 /* Smooth scrolling */
