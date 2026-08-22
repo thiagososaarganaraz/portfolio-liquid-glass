@@ -11,10 +11,11 @@ export default function Page() {
       {/* Fixed background */}
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        // style={{ backgroundImage: "url('/bg-liquid.jpg')", imageRendering: '-webkit-optimize-contrast, crisp-edges' }}
         style={{ backgroundImage: "url('/bg-liquid.jpg')" }}
         aria-hidden="true"
       >
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px]" />
       </div>
 
       <Navbar />
@@ -23,7 +24,7 @@ export default function Page() {
         <HeroSection />
         <AboutSection />
         <WorkSection />
-        <ProjectsCarousel />
+        {/* <ProjectsCarousel /> */}
       </main>
 
       <ContactFooter />

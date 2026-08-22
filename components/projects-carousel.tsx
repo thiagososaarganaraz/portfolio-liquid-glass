@@ -98,13 +98,13 @@ export function ProjectsCarousel() {
       <div className="mx-auto flex w-full max-w-full flex-col items-center">
         {/* Section Header */}
         <div className="mb-2 text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-white/60">
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-muted">
             {projectsContent.label}
           </p>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-high md:text-4xl">
             {projectsContent.title}
           </h2>
-          <p className="mt-4 text-sm text-white/50 max-w-2xl mx-auto">
+          <p className="mt-4 text-sm text-subtle max-w-2xl mx-auto">
             {projectsContent.description}
           </p>
         </div>
@@ -124,13 +124,14 @@ export function ProjectsCarousel() {
                 >
                   {/* Project Card */}
                   <article
-                    className="group glass rounded-3xl overflow-hidden
+                    className="group glass rounded-3xl overflow-hidden outline-none
                     w-full max-w-2xl transition-all duration-500
                     hover:-translate-y-2
-                    hover:border-white/30"
+                    hover:border-default
+                    focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   >
                     {/* Image Container */}
-                    <div className="relative h-96 overflow-hidden rounded-t-3xl bg-gradient-to-br from-white/10 to-white/5">                      <img
+                    <div className="relative h-96 overflow-hidden rounded-t-3xl border-b border-default bg-gradient-to-br from-white/10 to-white/5">                      <img
                         src={project.image}
                         alt={project.title}
                         className="h-full w-full object-cover transition-transform"
@@ -146,16 +147,16 @@ export function ProjectsCarousel() {
                     <div className="relative p-8 md:p-10">
                       {/* Title */}
                       <h3
-                        className="text-2xl md:text-3xl font-bold text-white mb-3
-                        group-hover:text-white transition-colors"
+                        className="text-2xl md:text-3xl font-bold text-high mb-3
+                        group-hover:text-high transition-colors"
                       >
                         {project.title}
                       </h3>
 
                       {/* Description */}
                       <p
-                        className="text-sm md:text-base leading-relaxed text-white/70
-                        group-hover:text-white/80 transition-colors mb-6"
+                        className="text-sm md:text-base leading-relaxed text-medium
+                        group-hover:text-medium transition-colors mb-6"
                       >
                         {project.description}
                       </p>
@@ -166,9 +167,7 @@ export function ProjectsCarousel() {
                           <span
                             key={tag}
                             className="glass-chip rounded-full px-3 py-1
-                            text-xs font-medium text-white/70
-                            transition-all duration-300
-                            hover:text-white hover:bg-white/10"
+                            text-xs font-medium text-muted"
                           >
                             {tag}
                           </span>
@@ -184,9 +183,9 @@ export function ProjectsCarousel() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2
                             px-4 py-2 rounded-lg
-                            glass transition-all duration-300
-                            hover:border-white/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.35)]
-                            text-white/80 hover:text-white"
+                            glass transition-all duration-300 outline-none
+                            hover:border-default hover:shadow-[0_15px_40px_rgba(0,0,0,0.35)]
+                            text-medium hover:text-high focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                           >
                             <ExternalLink className="h-4 w-4" />
                             {projectsContent.buttons.viewProject}
@@ -199,9 +198,9 @@ export function ProjectsCarousel() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2
                             px-4 py-2 rounded-lg
-                            glass transition-all duration-300
-                            hover:border-white/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.35)]
-                            text-white/80 hover:text-white"
+                            glass transition-all duration-300 outline-none
+                            hover:border-default hover:shadow-[0_15px_40px_rgba(0,0,0,0.35)]
+                            text-medium hover:text-high focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                           >
                             <Github className="h-4 w-4" />
                             {projectsContent.buttons.viewCode}
@@ -220,11 +219,11 @@ export function ProjectsCarousel() {
             onClick={scrollPrev}
             disabled={prevBtnDisabled}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 md:-translate-x-20
-            z-10 p-2 rounded-full glass
+            z-10 p-2 rounded-full glass outline-none
             transition-all duration-300
-            hover:border-white/30 hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]
+            hover:border-default hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]
             disabled:opacity-40 disabled:cursor-not-allowed
-            text-white/70 hover:text-white"
+            text-medium hover:text-high focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
@@ -233,11 +232,11 @@ export function ProjectsCarousel() {
             onClick={scrollNext}
             disabled={nextBtnDisabled}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 md:translate-x-20
-            z-10 p-2 rounded-full glass
+            z-10 p-2 rounded-full glass outline-none
             transition-all duration-300
-            hover:border-white/30 hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]
+            hover:border-default hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]
             disabled:opacity-40 disabled:cursor-not-allowed
-            text-white/70 hover:text-white"
+            text-medium hover:text-high focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <ChevronRight className="h-6 w-6" />
           </button>
@@ -249,10 +248,10 @@ export function ProjectsCarousel() {
             <button
               key={index}
               onClick={() => emblaApi && emblaApi.scrollTo(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${
+              className={`h-2 rounded-full transition-all duration-300 outline-none ${
                 index === 0
-                  ? "w-8 bg-white/70"
-                  : "w-2 bg-white/30 hover:bg-white/50"
+                  ? "w-8 bg-medium focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  : "w-2 bg-muted hover:bg-medium focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               }`}
               aria-label={`Go to project ${index + 1}`}
             />
@@ -260,7 +259,7 @@ export function ProjectsCarousel() {
         </div>
 
         {/* Project Count */}
-        <p className="mt-8 text-sm text-white/50">
+        <p className="mt-8 text-sm text-subtle">
           {projects.length} {projectsContent.projectsAvailable}
         </p>
       </div>

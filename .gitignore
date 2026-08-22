@@ -10,3 +10,8 @@ node_modules/
 .next/
 .env*.local
 .DS_Store
+
+out/
+master_cv_data.json
+.tokensave
+opencode.json
