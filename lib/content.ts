@@ -77,7 +77,7 @@ export const content = {
       company: "Snoop Consulting",
       companyWebsite: "snoopconsulting.com",
       role: "Software Engineer",
-      period: "April 2023 — Present",
+      period: "Since April 2023",
       location: "San Miguel de Tucumán, Argentina",
 
       experiences: [
@@ -222,7 +222,7 @@ export const content = {
       company: "Snoop Consulting",
       companyWebsite: "snoopconsulting.com",
       role: "Software Engineer (Semi Senior)",
-      period: "Abril 2023 — Actualidad",
+      period: "Desde Abril 2023",
       location: "San Miguel de Tucumán, Argentina",
 
       experiences: [
