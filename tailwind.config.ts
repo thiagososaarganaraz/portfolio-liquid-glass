@@ -61,6 +61,15 @@ const config: Config = {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        'liquid-glass': {
+          base: 'hsl(var(--liquid-glass-base))',
+          primary: {
+            100: 'hsl(var(--liquid-glass-primary-100))',
+            300: 'hsl(var(--liquid-glass-primary-300))',
+            500: 'hsl(var(--liquid-glass-primary-500))',
+          },
+          accent: 'hsl(var(--liquid-glass-accent))',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',

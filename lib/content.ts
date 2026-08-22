@@ -4,72 +4,110 @@ export const content = {
     nav: {
       home: "thiago.",
       about: "About",
-      work: "Work",
+      work: "Experience",
       contact: "Contact",
     },
 
     // Hero Section
     hero: {
-      label: "Frontend Engineer",
-      title: "Hello, I'm Thiago.",
+      label: "Software Engineer | AI & Automation",
+      title: "Hi, I'm Thiago Sosa Argañaraz.",
       subtitle:
-        "Bridging the gap between technical mastery and intuitive design.",
-      cta: "View My Work",
+        "Building AI-powered products and automating complex business workflows into intuitive digital experiences.",
+      cta: "Explore My Work",
     },
 
     // About Section
     about: {
       label: "About Me",
-      title: "Frontend Engineer.",
+      title: "Software Engineer & AI Automation Specialist",
       description:
-        "I craft user-centric digital experiences where thoughtful design meets robust engineering. I leverage modern AI tools as part of my workflow to learn faster, explore solutions, and work more efficiently—always prioritizing clarity, usability, and execution. From concept to production-ready code in React and Next.js, I focus on building interfaces that feel intuitive and reliable.",
+        "I specialize in building intelligent, high-performance web applications and automating operational workflows end-to-end. With deep expertise in modern frontend architectures (React, Next.js, TypeScript) and Full Stack systems (.NET, Node.js, Python), I integrate LLM capabilities and automation engines (n8n, MCP) to eliminate repetitive tasks and deliver tangible business impact. Currently completing my Degree in Computer Programming at UTN, I bring a user-centric mindset backed by solid engineering practices.",
+      profileTypes: {
+        aiEngineer:
+          "AI Software Engineer focused on LLM integrations, hybrid architectures, and intelligent agent workflows that reduce operational friction.",
+        frontendSpecialist:
+          "Frontend & Automation Specialist skilled in crafting sleek React/Next.js interfaces connected to resilient backend services and automated pipelines.",
+      },
+      education: {
+        label: "Education",
+        degree: "Associate Degree in Computer Programming",
+        institution: "Universidad Tecnológica Nacional (UTN)",
+        status: "Expected 2026",
+      },
+      skillsLabel: "Technical Stack & Capabilities",
       skills: {
         react: "React",
         typescript: "TypeScript",
         nextjs: "Next.js",
         tailwind: "Tailwind CSS",
         figma: "Figma",
-        uxdesign: "UI/UX Design",
-        ai: "AI-Assisted Workflow",
+        uxdesign: "UI/UX Principles",
+        ai: "AI & LLM Integrations",
       },
+      skillCategories: [
+        {
+          name: "Frontend Engineering",
+          skills: ["React", "TypeScript", "Next.js", "JavaScript", "CSS Modules", "HTML5", "Angular"],
+        },
+        {
+          name: "AI & Automation",
+          skills: ["LLM Integrations", "Tool Calling / MCP", "n8n (Advanced Automations)", "OpenAI API", "Prompt Engineering"],
+        },
+        {
+          name: "Backend & Data",
+          skills: [".NET / C#", "Node.js", "Python", "SQL / MySQL", "PostgreSQL", "BigQuery", "Firebase"],
+        },
+        {
+          name: "Cloud & DevOps",
+          skills: ["Google Cloud Platform (GCP)", "Azure DevOps", "CI/CD Pipelines", "GitHub Actions", "Git"],
+        },
+        {
+          name: "Design & UX",
+          skills: ["Figma", "UI/UX Principles", "Material UI", "Looker Studio"],
+        },
+      ],
     },
 
     // Work Section
     work: {
-      label: "Experience",
-      title: "How I contribute in my current role.",
-      currentlyAt: "Currently at",
+      label: "Work Experience",
+      title: "Engineering Solutions with Real Impact",
+      currentlyAt: "Current Role",
       company: "Snoop Consulting",
       companyWebsite: "snoopconsulting.com",
+      role: "Software Engineer",
+      period: "April 2023 — Present",
+      location: "San Miguel de Tucumán, Argentina",
 
       experiences: [
         {
-          title: "Frontend Product Engineering",
-          scope: "User-facing experiences",
+          title: "Frontend Architecture & Product Engineering",
+          scope: "End-to-end web applications",
           description:
-            "Designing and building intuitive, high-impact interfaces for a fast-moving startup. I translate abstract business needs into clear, usable frontends, combining strong engineering fundamentals with efficient, modern workflows.",
-          tags: ["React", "Frontend Architecture", "UX Thinking"],
+            "Lead frontend architecture and component design across multiple business-critical products, translating complex requirements into highly responsive, scalable interfaces.",
+          tags: ["React", "TypeScript", "Frontend Architecture", "UI Components"],
         },
         {
-          title: "UX-Driven Development",
-          scope: "Visual clarity & interaction",
+          title: "National Auditor Management Platform",
+          scope: "High-impact client system (IRAM)",
           description:
-            "Shaping interfaces with a strong visual and interaction-first mindset, inspired by modern design systems and widely adopted products. I naturally visualize solutions before writing code, allowing for fast and intentional execution.",
-          tags: ["UI Design", "Interaction Design", "Design Trends"],
+            "Designed and maintain a nationwide auditor management system for IRAM, streamlining core operational workflows and directly improving daily auditor efficiency.",
+          tags: [".NET", "React", "MySQL", "Clean Architecture"],
         },
         {
-          title: "Performance & User Feedback",
-          scope: "Responsiveness & perception",
+          title: "AI Integration & Workflow Automation",
+          scope: "Process optimization & CI/CD",
           description:
-            "Optimizing perceived and real performance by reducing waiting times, adding meaningful feedback, and ensuring users are always informed. Every interaction is designed to feel fluid, responsive, and never blocking.",
-          tags: ["Performance", "UX", "Accessibility"],
+            "Engineered automated workflows and deployment pipelines using n8n, GitHub Actions, Azure, and GCP, significantly cutting down manual overhead and release times.",
+          tags: ["n8n", "LLM APIs", "GCP", "GitHub Actions", "Azure"],
         },
         {
-          title: "Product Collaboration & Leadership",
-          scope: "Communication & ownership",
+          title: "Full Stack Development & Agile Leadership",
+          scope: "Cross-functional collaboration",
           description:
-            "Working directly with the CEO and product leadership to gather requirements, align priorities, and propose solutions. I collaborate with purpose, mentor junior developers, and help onboard new team members into professional, agile environments.",
-          tags: ["Agile", "Communication", "Mentorship"],
+            "Implement Full Stack solutions adhering to Clean Architecture guidelines. Collaborate with product leads to refine features, align team priorities, and mentor engineers.",
+          tags: ["Full Stack", "Clean Architecture", "Mentorship", "Agile"],
         },
       ],
     },
@@ -77,9 +115,13 @@ export const content = {
     // Contact Section
     contact: {
       label: "Get In Touch",
-      title: "Let's build something together.",
+      title: "Let's build something extraordinary together.",
       description:
-        "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+        "Interested in developing AI-driven solutions, streamlining company operations, or building a modern web platform? I'm always open to new challenges and collaborations.",
+      locationLabel: "Location",
+      locationValue: "San Miguel de Tucumán, Argentina",
+      languagesLabel: "Languages",
+      languagesValue: "Spanish (Native) · English (B2 / Conversational Technical)",
       socialLinks: {
         github: "GitHub",
         linkedin: "LinkedIn",
@@ -92,7 +134,7 @@ export const content = {
       label: "Portfolio",
       title: "Featured Projects",
       description:
-        "",
+        "A selection of applications and automations built to solve real-world challenges.",
       buttons: {
         viewProject: "View Project",
         viewCode: "Code",
@@ -113,66 +155,104 @@ export const content = {
 
     // Sección Hero
     hero: {
-      label: "Frontend Engineer",
-      title: "Hola, soy Thiago.",
+      label: "Software Engineer | IA y Automatizaciones",
+      title: "Hola, soy Thiago Sosa Argañaraz.",
       subtitle:
-        "Uniendo la excelencia técnica con el diseño intuitivo.",
-      cta: "Ver mi trabajo",
+        "Desarrollo productos impulsados por IA y automatizo procesos de negocio complejos para convertirlos en experiencias digitales fluidas.",
+      cta: "Conoce mi trabajo",
     },
 
     // Sección Sobre mí
     about: {
       label: "Sobre mí",
-      title: "Frontend Engineer.",
+      title: "Software Engineer & Especialista en Automatizaciones e IA",
       description:
-        "Creo experiencias digitales centradas en el usuario, donde el diseño reflexivo se encuentra con la ingeniería sólida. Utilizo herramientas modernas de IA como parte de mi flujo de trabajo para aprender más rápido, explorar soluciones y trabajar de forma más eficiente, sin perder foco en la claridad, la usabilidad y la ejecución. Desde la idea hasta código listo para producción en React y Next.js.",
+        "Me especializo en crear aplicaciones web modernas de alto impacto y en automatizar flujos operativos de punta a punta. Combinando una sólida base frontend (React, Next.js, TypeScript) con desarrollo Full Stack (.NET, Node.js, Python) e integración de agentes/LLMs y herramientas de automatización (n8n, MCP), optimizo procesos para eliminar el trabajo manual repetitivo. Cursando la Tecnicatura Universitaria en Programación en la UTN, aporto una mentalidad enfocada en resolver problemas reales con excelencia técnica.",
+      profileTypes: {
+        aiEngineer:
+          "Software Engineer especializado en integraciones con LLMs, arquitecturas híbridas y automatizaciones complejas orientadas al impacto de negocio.",
+        frontendSpecialist:
+          "Especialista Frontend con fuerte dominio de interfaces modernas (React/Next.js) que conecta automatizaciones (n8n, APIs) para resolver problemas operativos.",
+      },
+      education: {
+        label: "Educación",
+        degree: "Tecnicatura Universitaria en Programación",
+        institution: "Universidad Tecnológica Nacional (UTN)",
+        status: "Previsto 2026",
+      },
+      skillsLabel: "Stack Técnico y Capacidades",
       skills: {
         react: "React",
         typescript: "TypeScript",
         nextjs: "Next.js",
         tailwind: "Tailwind CSS",
         figma: "Figma",
-        uxdesign: "Diseño UI/UX",
-        ai: "Flujo de trabajo asistido por IA",
+        uxdesign: "Principios UI/UX",
+        ai: "Integración de IA / LLM",
       },
+      skillCategories: [
+        {
+          name: "Ingeniería Frontend",
+          skills: ["React", "TypeScript", "Next.js", "JavaScript", "CSS Modules", "HTML5", "Angular"],
+        },
+        {
+          name: "IA y Automatización",
+          skills: ["Integración de LLMs", "Tool Calling / MCP", "n8n (Flujos Avanzados)", "OpenAI API", "Prompt Engineering"],
+        },
+        {
+          name: "Backend y Datos",
+          skills: [".NET / C#", "Node.js", "Python", "SQL / MySQL", "PostgreSQL", "BigQuery", "Firebase"],
+        },
+        {
+          name: "Nube y DevOps",
+          skills: ["Google Cloud Platform (GCP)", "Azure DevOps", "CI/CD", "GitHub Actions", "Git"],
+        },
+        {
+          name: "Diseño y Herramientas",
+          skills: ["Figma", "Principios UX/UI", "Material UI", "Looker Studio"],
+        },
+      ],
     },
 
     // Sección Experiencia
     work: {
-      label: "Experiencia",
-      title: "Cómo contribuyo en mi rol actual.",
-      currentlyAt: "Actualmente en",
+      label: "Experiencia Laboral",
+      title: "Soluciones de Ingeniería con Impacto Real",
+      currentlyAt: "Rol Actual",
       company: "Snoop Consulting",
       companyWebsite: "snoopconsulting.com",
+      role: "Software Engineer (Semi Senior)",
+      period: "Abril 2023 — Actualidad",
+      location: "San Miguel de Tucumán, Argentina",
 
       experiences: [
         {
-          title: "Ingeniería de Producto Frontend",
-          scope: "Experiencias orientadas al usuario",
+          title: "Arquitectura Frontend e Ingeniería de Producto",
+          scope: "Aplicaciones web de punta a punta",
           description:
-            "Diseño y construcción de interfaces intuitivas y de alto impacto para una startup en rápido crecimiento. Traduzco necesidades abstractas del negocio en interfaces claras y usables, apoyándome en fundamentos sólidos y flujos de trabajo eficientes.",
-          tags: ["React", "Arquitectura Frontend", "Pensamiento UX"],
+            "Lidero la arquitectura frontend y el diseño de componentes UI en múltiples productos empresariales críticos, traduciendo requerimientos complejos en interfaces ágiles y escalables.",
+          tags: ["React", "TypeScript", "Arquitectura Frontend", "Componentes UI"],
         },
         {
-          title: "Desarrollo Orientado a UX",
-          scope: "Claridad visual e interacción",
+          title: "Sistema Nacional de Gestión de Auditores",
+          scope: "Impacto operativo a gran escala (IRAM)",
           description:
-            "Diseño de interfaces con una fuerte mentalidad visual e interactiva, inspirada en sistemas de diseño modernos. Visualizo soluciones antes de escribir código, lo que permite una ejecución rápida e intencional.",
-          tags: ["Diseño UI", "Diseño de Interacción", "Tendencias de Diseño"],
+            "Desarrollo y mantengo en producción el sistema nacional de gestión de auditores para IRAM, optimizando procesos clave de la auditoría y la operación del cliente.",
+          tags: [".NET", "React", "MySQL", "Clean Architecture"],
         },
         {
-          title: "Rendimiento y Retroalimentación",
-          scope: "Capacidad de respuesta y percepción",
+          title: "Integraciones de IA y Automatización de Procesos",
+          scope: "Optimización operativa y CI/CD",
           description:
-            "Optimizo el rendimiento percibido y real reduciendo tiempos de espera, agregando feedback significativo y manteniendo al usuario siempre informado. Cada interacción está pensada para sentirse fluida y sin fricciones.",
-          tags: ["Rendimiento", "UX", "Accesibilidad"],
+            "Diseño e integro flujos de trabajo automatizados y canalizaciones de despliegue con n8n, GitHub Actions, Azure y GCP, reduciendo drásticamente tiempos de entrega y tareas manuales.",
+          tags: ["n8n", "LLM APIs", "GCP", "GitHub Actions", "Azure"],
         },
         {
-          title: "Colaboración de Producto y Liderazgo",
-          scope: "Comunicación y responsabilidad",
+          title: "Desarrollo Full Stack y Liderazgo Técnico",
+          scope: "Colaboración multidisciplinaria",
           description:
-            "Trabajo directamente con el CEO y el liderazgo de producto para relevar requisitos, alinear prioridades y proponer soluciones. Colaboro con propósito, mentoreo desarrolladores junior y ayudo a integrar nuevos miembros en entornos ágiles y profesionales.",
-          tags: ["Ágil", "Comunicación", "Mentoría"],
+            "Construyo soluciones Full Stack siguiendo principios de Clean Architecture. Colaboro con líderes de producto para definir roadmap y mentoreo a desarrolladores del equipo.",
+          tags: ["Full Stack", "Clean Architecture", "Mentoría", "Metodologías Ágiles"],
         },
       ],
     },
@@ -182,7 +262,11 @@ export const content = {
       label: "Contacto",
       title: "Construyamos algo increíble juntos.",
       description:
-        "Siempre estoy abierto a conversar sobre nuevos proyectos, ideas creativas u oportunidades.",
+        "¿Tienes un proyecto de IA en mente, quieres automatizar flujos en tu empresa o escalar tu plataforma web? Estoy disponible para conversar y colaborar.",
+      locationLabel: "Ubicación",
+      locationValue: "San Miguel de Tucumán, Argentina",
+      languagesLabel: "Idiomas",
+      languagesValue: "Español (Nativo) · Inglés (B2 / Conversacional Técnico)",
       socialLinks: {
         github: "GitHub",
         linkedin: "LinkedIn",
@@ -195,7 +279,7 @@ export const content = {
       label: "Portafolio",
       title: "Proyectos Destacados",
       description:
-        "",
+        "Una selección de aplicaciones y automatizaciones diseñadas para resolver problemas concretos.",
       buttons: {
         viewProject: "Ver Proyecto",
         viewCode: "Código",

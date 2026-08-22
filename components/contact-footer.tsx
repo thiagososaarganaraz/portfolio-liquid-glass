@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin, Languages } from "lucide-react"
 import { useLanguage } from "@/context/LanguageContext"
 import { content } from "@/lib/content"
 
@@ -25,6 +25,7 @@ export function ContactFooter() {
       icon: Mail,
     },
   ]
+
   return (
     <footer id="contact" className="relative px-6 pb-12 pt-16 md:pb-16 md:pt-28">
       <div className="mx-auto max-w-2xl">
@@ -40,6 +41,22 @@ export function ContactFooter() {
           <p className="mx-auto mt-4 max-w-md text-pretty text-base leading-relaxed text-medium">
             {contactContent.description}
           </p>
+
+          {/* Location & Languages */}
+          {/* <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs md:text-sm text-medium">
+            {contactContent.locationValue && (
+              <div className="glass-chip flex items-center gap-2 rounded-full px-4 py-2 border border-white/10">
+                <MapPin className="h-4 w-4 text-accent" />
+                <span>{contactContent.locationValue}</span>
+              </div>
+            )}
+            {contactContent.languagesValue && (
+              <div className="glass-chip flex items-center gap-2 rounded-full px-4 py-2 border border-white/10">
+                <Languages className="h-4 w-4 text-accent" />
+                <span>{contactContent.languagesValue}</span>
+              </div>
+            )}
+          </div> */}
 
           <div className="mt-10 flex items-center justify-center gap-4">
             {links.map((link) => (
@@ -63,7 +80,7 @@ export function ContactFooter() {
         </div>
 
         <p className="mt-10 text-center text-xs text-subtle">
-          {"© 2026 Thiago. Crafted with care."}
+          {"© 2026 Thiago Sosa Argañaraz. Crafted with care."}
         </p>
       </div>
     </footer>
