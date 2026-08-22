@@ -14,3 +14,4 @@ node_modules/
 out/
 master_cv_data.json
 .tokensave
+opencode.json
